@@ -4,9 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,5 +14,5 @@ public class UserReadOnlyDTO {
     private String firstname;
     private String lastname;
     private Role role;
-    private List<TaskReadOnlyDTO> task;
+    private Set<TaskReadOnlyDTO> tasks;
 }

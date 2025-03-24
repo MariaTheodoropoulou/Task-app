@@ -23,6 +23,5 @@ public class TaskInsertDTO {
 
     private LocalDate dueDate;
 
-    @NotNull
     private Long userId;
 }

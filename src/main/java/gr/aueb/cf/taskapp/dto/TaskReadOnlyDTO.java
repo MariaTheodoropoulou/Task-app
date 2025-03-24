@@ -1,5 +1,6 @@
 package gr.aueb.cf.taskapp.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import gr.aueb.cf.taskapp.core.enums.Status;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -20,4 +21,17 @@ public class TaskReadOnlyDTO {
     private LocalDateTime createdAt;
     private LocalDateTime updated;
     private Long userId;
+
+    @Override
+    public String toString() {
+        return "User tasks { " +
+                " title = " + title +
+                " ,description = " + description +
+                " ,status = " + status +
+                " ,due date = " + dueDate +
+                " ,created at = " + createdAt +
+                " ,updated = " + updated +
+                " ,user id = " + userId +
+                " } ";
+    }
 }

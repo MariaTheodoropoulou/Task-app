@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,4 +34,5 @@ public class UserUpdateDTO {
     @NotNull(message = "Required field")
     private Role role;
 
+    private Set<TaskReadOnlyDTO> task;
 }

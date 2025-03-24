@@ -2,6 +2,7 @@ package gr.aueb.cf.taskapp.controllers;
 
 import gr.aueb.cf.taskapp.core.exceptions.InvalidTaskException;
 import gr.aueb.cf.taskapp.core.exceptions.TaskNotFoundException;
+import gr.aueb.cf.taskapp.core.exceptions.UserNotFoundException;
 import gr.aueb.cf.taskapp.dto.TaskInsertDTO;
 import gr.aueb.cf.taskapp.dto.TaskReadOnlyDTO;
 import gr.aueb.cf.taskapp.dto.TaskUpdateDTO;
@@ -62,7 +63,7 @@ public class TaskController {
     }
 
     @GetMapping("/task/all")
-    public ResponseEntity<List<TaskReadOnlyDTO>> getAllTasks() throws InvalidTaskException {
+    public ResponseEntity<List<TaskReadOnlyDTO>> getAllTasks() throws InvalidTaskException, TaskNotFoundException, UserNotFoundException {
         List<TaskReadOnlyDTO> taskReadOnlyDTOList = taskService.getAllTasks();
         return new ResponseEntity<>(taskReadOnlyDTOList, HttpStatus.OK);
     }

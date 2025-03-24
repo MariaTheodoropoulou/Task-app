@@ -16,9 +16,9 @@ public class EmailController {
 //    public void sendMail(@Valid @RequestBody String mail, @RequestBody String subject, @RequestBody String body) {
 //        mailService.sendMail(mail, subject, body);
 //    }
-    @GetMapping("/send-mail")
-    public String sendMail() {
-        mailService.sendMail("springbootermail@gmail.com", "Spring Booter Mail", "Spring Booter Mail");
+    @GetMapping("/send-mail/{body}")
+    public String sendMail(@PathVariable String body) {
+        mailService.sendMail("springbootermail@gmail.com", "Spring Booter Mail", body);
         return "Email sent";
     }
 }

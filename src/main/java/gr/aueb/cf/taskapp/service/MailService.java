@@ -17,7 +17,7 @@ public class MailService {
         message.setFrom("noreply@trial-vywj2lp80rqg7oqz.mlsender.net");
         message.setTo(to);
         message.setSubject(subject);
-        message.setText(body);
+        message.setText("http://localhost:8080/api/export/pdf/" + body);
         mailSender.send(message);
     }
 }

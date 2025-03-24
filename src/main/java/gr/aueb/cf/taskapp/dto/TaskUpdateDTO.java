@@ -27,6 +27,5 @@ public class TaskUpdateDTO {
     @NotNull(message = "Required field")
     private LocalDate dueDate;
 
-    @NotNull
     private Long userId;
 }
